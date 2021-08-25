@@ -111,7 +111,7 @@ let gerenciaRedesSociais = () => {
   for(let i=0;i<5;i++){
       let achou = false
       for(let j=o;j<vetorUsuariosPosts.length;j++){
-          if(vetorUsuarios[i].login == vetorUsuariosPosts[i].login){
+          if(vetorUsuarios[i].login == vetorUsuariosPosts[j].login){
               vetorUsuariosPosts[j].qtde = vetorUsuariosPosts[j].qtde + vetorUsuarios[i].qtdePosts
               achou = true
           }
@@ -119,9 +119,10 @@ let gerenciaRedesSociais = () => {
       if(!achou){
           vetorUsuariosPosts.push({
               login: vetorUsuarios[i].login,
-              qtde: vetorUsuarios.[i].qtdePosts
+              qtde: vetorUsuarios[i].qtdePosts
           })
       }
   }
+  console.log(vetorUsuariosPosts)
 
 }
