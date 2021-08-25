@@ -91,6 +91,21 @@ let gerenciaRedesSociais = () => {
     console.log(`A quantidade de posts da rede social ${vetorRedesSociais[i].codigo} é ${conta}`)
   }
   // Exe3) o usuário informa informa o login do usuário, e o programa retorna quantos posts ele fez
+  let login = prompt(`Informe o login de usuário desejado`)
+  let somaPosts = 0 
+  let achou = false
+  for (leti=0;i<5;i++){
+      if (login == vetorUsuarios[i].login){
+          somaPosts = somaPosts + vetorUsuarios[i].qtdePosts
+          achou = true
+      }
+  }
+  if(achou){
+      alert(`O usuário com login ${login} realizou ${somaPosts}`)
+  }
+  else{
+      alert(`Uusário não encontrado`)
+  }
   // Exe4) o programa retorna quantos posts foram feitos por cada usuário
 
 }
